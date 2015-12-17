@@ -8,7 +8,7 @@ import gst
 
 gobject.threads_init()
 ui = uic.loadUiType("app.ui")[0]
-db = MySQLdb.connect("localhost", "root", "root", "animes")
+db = MySQLdb.connect("localhost", "root", "root", "dbname")
 
 
 def on_sync_message(bus, message, window_id):
@@ -72,6 +72,7 @@ class MyWindowClass(QtGui.QMainWindow, ui):
         player.set_state(gst.STATE_NULL)
         player.set_property('uri', False)
         if link != '':
+            print link
             player.set_property('uri', link)
             player.set_state(gst.STATE_PLAYING)
             self.play_pause.setText('Pause')
