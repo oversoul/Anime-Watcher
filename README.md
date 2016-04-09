@@ -8,6 +8,6 @@ this is a simple test software, allowing to watch anime streamings.
    - MySQLdb
    - Gst
 1. Import the database 
-	- "db.sql" is a simple.
+	- "db.sql" is a sample.
 2. Set the database config (watcher.py line 11)
 3. run the "watcher.py" file
